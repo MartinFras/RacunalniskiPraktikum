@@ -30,6 +30,11 @@ void MainWindow::on_naloga10Button_clicked()
     /// izpis na UI:
     /// ui->imeObjektaZaIzpis->setText(<tekst v obliki QString>);
     /// cout deluje enako kot že poznate
+    ///
+    /// QImputDialog nam odpre pogovorno okno v katerega lahko vnašamo vrednosti (in jih lahko shranimo v spremenljivke)
+    /// QImputDialog::getInt(stevilo oblike int);
+    /// QImputDialog::getText(tekst oblike QString);
+    /// QImputDialog::getDouble(stevilo oblike double);
 
     int vnesenoStevilo = QInputDialog::getInt(this, "Pozor novo okno!", "Vnesite celo število med 0 in 10", 0, 0, 10);
     ui->izpis->setText(QString::number(vnesenoStevilo));
