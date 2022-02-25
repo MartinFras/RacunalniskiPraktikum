@@ -65,5 +65,10 @@ void MainWindow::on_naloga11Button_clicked()
 
     string skupenNiz = niz + niz2.toStdString();
     cout << "skupen niz: " << skupenNiz << endl;
+    
+    // branje vsebine besedilnega okna - npr QTextBrowser//
+    QString vsebina = ui->izpis->toPlainText();
+    
+    // branje enovrstičnega besedilnega okna - npr. QLineEdit uporablja funkcijo text() namesto toPlainText()
 }
 
