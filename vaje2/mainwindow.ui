@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="buttonGo">
+    <property name="geometry">
+     <rect>
+      <x>608</x>
+      <y>100</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>GO!</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inputIndex">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>102</y>
+      <width>131</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>index</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="outputText">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>132</y>
+      <width>759</width>
+      <height>107</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Tukaj bo prikazan rezultat testnega besedila, nad katerim bo izvedena izbrana funkcija z izbranimi parametri</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inputStartingString">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>421</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777172</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="placeholderText">
+     <string> niz</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inputParameter">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>72</y>
+      <width>421</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>param</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonReset">
+    <property name="geometry">
+     <rect>
+      <x>694</x>
+      <y>100</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="selectFunction">
+    <property name="geometry">
+     <rect>
+      <x>381</x>
+      <y>100</y>
+      <width>221</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Izberite funkcijo</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="explanationOutput">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>250</y>
+      <width>751</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Obrazlozitev funkcije</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
