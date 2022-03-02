@@ -14,11 +14,21 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void preberiVnosnaPolja();
+    void pocistiVnosnaPolja();
+    void izvediFunkcijo(int izbira);
+    int index;
+    QString osnovniNiz;
+    QString paramNiz;
+    QString output;
+    QString razlaga;
+    int izbranaFunkcija;
 
 private slots:
     void on_buttonReset_clicked();
 
     void on_buttonGo_clicked();
+
 
 private:
     Ui::MainWindow *ui;

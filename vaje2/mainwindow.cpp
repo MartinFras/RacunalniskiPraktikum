@@ -26,31 +26,26 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_buttonReset_clicked()
-{
-    //počisti prikazano vsebino elementov
+void MainWindow::pocistiVnosnaPolja(){
     ui->inputParameter->clear();
     ui->inputIndex->clear();
     ui->inputStartingString->clear();
 }
 
-
-void MainWindow::on_buttonGo_clicked()
+void MainWindow::on_buttonReset_clicked()
 {
-    int izbranaFunkcija = ui->selectFunction->currentIndex();
-    //cout << ui->selectFunction->itemText(izbranaFunkcija).toStdString() << endl;
+   pocistiVnosnaPolja();
+}
 
-    int index = ui->inputIndex->text().toInt();
-    QString osnovniNiz = ui->inputStartingString->text();
-    QString paramNiz = ui->inputParameter->text();
-    QString output;
-    QString razlaga;
+void MainWindow::preberiVnosnaPolja(){
+    index = ui->inputIndex->text().toInt();
+    osnovniNiz = ui->inputStartingString->text();
+    paramNiz = ui->inputParameter->text();
+    izbranaFunkcija = ui->selectFunction->currentIndex();
+}
 
-    /*
-    ".append", ".at[5]", ".back()", ".contains()", ".count()", ".indexOf()"
-    */
-    switch(izbranaFunkcija){
+void MainWindow::izvediFunkcijo(int izbira){
+    switch(izbira){
     case 0: // .append()
         output = osnovniNiz.append(paramNiz);
         razlaga = "niz.append(param) prilepi parameter na konec niza";
@@ -90,5 +85,12 @@ void MainWindow::on_buttonGo_clicked()
     }
     ui->outputText->setText(output);
     ui->explanationOutput->setText(razlaga);
+}
+
+void MainWindow::on_buttonGo_clicked()
+{
+    preberiVnosnaPolja();
+    izvediFunkcijo(izbranaFunkcija);
+
 }
 
