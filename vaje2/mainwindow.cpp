@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QStringList options[] = {
+    QStringList options = {
       ".append()", ".at()", ".back()", ".contains()", ".count()", ".indexOf()", ".insert()"};
     /*Druge pogosto uporabljene funkcije:
      .isEmpty(), .isNull(), .isUpper(), .lastIndexOf(), .length(), .prepend(), .remove(), .replace(), .resize(), .split(), .toLower(), .toUpper()
