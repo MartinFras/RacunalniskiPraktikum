@@ -26,7 +26,20 @@ MainWindow::MainWindow(QWidget *parent)
     DomacaZival kopijaMuceCopatarice {mucaCopatarica};
     cout << kopijaMuceCopatarice.getIme().toStdString() << endl;
 
+    //primeri public vs private (javne vs privatne)
+    DomacaZival muca1;
+    //muca1.ime = "Muca Maca"; //za public oz. vidne spremenljivke
+    muca1.setIme("Muca Maca"); //za private oz. skrite spremenljivke
+    //muca1.starost = 1;
+    muca1.setStarost(1);
+    //muca1.vrsta = "muca";
+    muca1.setVrsta("muca");
+    //cout << muca1.ime.toStdString() << endl; //public
+    cout << muca1.getIme().toStdString() << endl; //private
+        
+    //primeri klica metode razreda.
     cout << kopijaMuceCopatarice.izpisiZival().toStdString() << endl;
+    cout << muca1.izpisiZival().toStdString() << endl
 }
 
 MainWindow::~MainWindow()
