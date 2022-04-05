@@ -1,4 +1,5 @@
 #include "oseba.h"
+#include <QDebug>
 
 const QString &Oseba::getIme() const
 {
@@ -58,9 +59,10 @@ Oseba::Oseba(QString ime, QString priimek, int starost, int *id)
 
 Oseba::~Oseba()
 {
-    delete this->id;
-    this->id = nullptr;
-    delete this;
+    qDebug() << "brisem osebo" << ime;
+    delete id;
+    id = nullptr;
+    //delete this;
 }
 
 

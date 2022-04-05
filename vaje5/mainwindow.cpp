@@ -32,6 +32,7 @@ MainWindow::MainWindow(QWidget *parent)
     //veljajo enaka pravila, kot pri dinamični alokaciji spremenljivk
 
     Oseba *janez = new Oseba();
+    janez->setIme("Janez");
 
     //čiščenje pomnilnika - destruktorji razreda se vedno kličejo avtomatsko na koncu bloka kode. Če jih uporabimo prej, se bodo klicali večkrat in se program sesuje
     //delete janez;
@@ -50,6 +51,13 @@ MainWindow::MainWindow(QWidget *parent)
     joze->setId(jozeIDptr);
     delete jozeIDptr;
     jozeIDptr = nullptr;
+
+    //izbrišemo dinamični objekt - delete sproži destruktor
+    delete janez;
+
+    //statični objekti se brišejo sami ob koncu bloka (kliče se destruktor)
+    Oseba test;
+    test.setIme("test");
 }
 
 MainWindow::~MainWindow()
